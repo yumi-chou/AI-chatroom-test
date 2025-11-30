@@ -54,19 +54,17 @@ class ChatResponse(BaseModel):
 
 app = FastAPI(title="WK11 Chat API")
 
-origins = [
-    "http://localhost:5500", 
-    "http://127.0.0.1:5500",
-    "http://localhost:5173", 
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   
+    allow_origins=[
+        "http://localhost:5500",  
+        "https://ai-chatroom-test-jccg.vercel.app/ ",
+    ],
     allow_credentials=True,
-    allow_methods=["*"],  
-    allow_headers=["*"],  
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
 
 security = HTTPBearer()
 
