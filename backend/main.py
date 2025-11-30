@@ -58,7 +58,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5500",  
-        "https://ai-chatroom-test-jccg.vercel.app/ ",
+        "https://ai-chatroom-test-jccg.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
