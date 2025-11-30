@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI 聊天室</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>AI 聊天室</h1>
+      <section id="login-section" class="card">
+        <h2>登入</h2>
+        <form id="login-form">
+          <label>
+            帳號：
+            <input type="text" id="username" value="student" required />
+          </label>
+          <label>
+            密碼：
+            <input
+              type="password"
+              id="password"
+              value="123456"
+              required
+            />
+          </label>
+          <button type="submit">登入</button>
+        </form>
+        <p class="hint">Demo 帳號：student / 123456</p>
+        <p id="login-status" class="status"></p>
+      </section>
+
+      <section id="chat-section" class="card hidden">
+        <div class="chat-header">
+          <h2>聊天室</h2>
+          <button id="logout-btn" class="secondary">登出</button>
+        </div>
+
+        <label class="remember">
+          <input type="checkbox" id="remember-history" checked />
+          記得歷史聊天訊息
+        </label>
+
+        <div id="chat-window" class="chat-window"></div>
+
+        <form id="chat-form" class="chat-input">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="輸入訊息…"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">送出</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

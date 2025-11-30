@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  background: linear-gradient(to bottom, #6a8dff 0%, #b08cff 100%);
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.card {
+  width: 90%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.15); /* 半透明玻璃 */
+  backdrop-filter: blur(12px);           /* 模糊玻璃效果 */
+  border-radius: 20px;
+  padding: 20px 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #007aff;
+  color: white;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.status {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.status.error {
+  color: #c62828;
+}
+
+.status.success {
+  color: #2e7d32;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-window {
+  padding: 15px;
+  height: 350px;
+  overflow-y: auto;
+
+  border-radius: 16px;
+  margin: 16px 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(6px);
+}
+
+
+.msg {
+  margin-bottom: 8px;
+  max-width: 80%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  width: fit-content;  
+  word-break: break-word;
+}
+
+.msg.user {
+  background: #007aff;
+  color: white;
+  margin-left: auto;
+  text-align: right;
+}
+
+.msg.assistant {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.msg.system {
+  background: #fff3cd;
+  color: #8a6d3b;
+  margin: 0 auto 8px;
+  text-align: center;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+}
+
+.remember {
+  font-size: 0.9rem;
+  color: #555;
+}
